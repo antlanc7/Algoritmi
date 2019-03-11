@@ -7,7 +7,6 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		System.out.print("f(x) = ");
 		e.setFunction(input.nextLine());
-		System.out.println(e.f(x));
 		System.out.print("a = ");
 		double a=input.nextDouble();
 		System.out.print("b = ");
