@@ -7,4 +7,9 @@ public class Evaluator {
 		expression=new ExpressionBuilder(f).variable("x").build();
 	}
 	
+	public double f(double x) {
+		expression.setVariable("x", x);
+		return expression.evaluate();
+	}
+	
 }
