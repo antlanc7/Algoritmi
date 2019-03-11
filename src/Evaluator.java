@@ -16,7 +16,7 @@ public class Evaluator {
 		
 		double x = a;
 		double h = (b-a)/n;
-		sum = 0;
+		double sum = 0;
 		for (int i = 0; i < n; i++) {
 			sum+= f(x);
 			x += h;
