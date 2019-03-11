@@ -33,4 +33,16 @@ public class Evaluator {
 		return sum*h;
 	}
 	
+	public double integralTrap(double a, double b, int n) {
+		
+		double h = (b-a)/n;
+		double sum = (f(a)+f(b))/2;
+		double x = a + h;
+		for (int i = 1; i < n-1; i++) {
+			sum += f(x);
+			x += h;
+		}
+		
+		return sum*h;
+	}
 }
