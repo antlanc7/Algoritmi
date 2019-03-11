@@ -13,6 +13,9 @@ public class Main {
 		double b=input.nextDouble();
 		System.out.println(e.integralRect(a,b,500));
 		System.out.println(e.integralTrap(a,b,500));
+		System.out.print("x0 = ");
+		double x0 = input.nextDouble();
+		System.out.println(e.derivate(x0, 10000));
 		input.close();
 	}
 

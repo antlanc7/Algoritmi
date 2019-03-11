@@ -45,4 +45,26 @@ public class Evaluator {
 		
 		return sum*h;
 	}
+	
+	public double derivate(double x0, int prec) {
+		
+		double h = 1.0/prec;
+		double x = x0 + h;
+		double df = f(x);
+		x = x0;
+		return (df - f(x))/h;
+		
+	}
+		
+	public double derivate(double x0) {
+		
+		int prec = 1000;
+		double h = 1.0/prec;
+		double x = x0 + h;
+		double df = f(x);
+		x = x0;
+		return (df - f(x))/h;
+			
+	}
+	
 }
