@@ -15,6 +15,7 @@ public class Main {
 		System.out.print("b = ");
 		double b=input.nextDouble();
 		System.out.println(e.integralRect(a,b,1000));
+		input.close();
 	}
 
 }
