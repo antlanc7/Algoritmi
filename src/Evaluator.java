@@ -53,7 +53,7 @@ public class Evaluator {
 	public double derivate(double x0, int prec) {
 		
 		double h = 1.0/prec;
-		return (f(x0+h) - f(x0))/h;
+		return (f(x0+h) - f(x0-h))/(2*h);
 		
 	}
 		
