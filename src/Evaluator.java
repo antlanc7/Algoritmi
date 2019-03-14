@@ -88,8 +88,8 @@ public class Evaluator {
 		return integralSimpson(a, b, n, 0.0001, (int)10E6);
 		
 	}
-	
-	
+
+
 	public double derivate(double x0, int prec) {
 		
 		double h = 1.0/prec;
@@ -101,6 +101,17 @@ public class Evaluator {
 		
 		return derivate(x0, 1000);
 		
+	}
+
+	public double bisectionZero(double a, double b, double eps, int nMax){
+		int i=0;
+		double c=0;
+		while (i<nMax && (b-a)>eps){
+			c=a+(b-a)/2;
+			if (Math.signum(f(a))*Math.signum(f(c))<0) b=c;
+			else a=c;
+		}
+		return c;
 	}
 	
 }
