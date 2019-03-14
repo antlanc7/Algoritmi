@@ -94,7 +94,12 @@ public class Evaluator {
 		
 		double h = 1.0/prec;
 		return (f(x0+h) - f(x0-h))/(2*h);
-		
+
+	}
+
+	public double derivate2(double x0, int prec){
+		double h = 1.0/prec;
+		return (f(x0-2*h)-8*f(x0-h)+8*f(x0+h)-f(x0+2*h))/(12*h);
 	}
 		
 	public double derivate(double x0) {
