@@ -46,7 +46,7 @@ public class Evaluator {
 	}
 	
 	
-	public double integralSimpson(double a, double b, int n, double prec) {
+	public double integralSimpson(double a, double b, int n, double prec, int nmax) {
 		
 		if (n%2 != 0) n++; 
 		
@@ -78,14 +78,14 @@ public class Evaluator {
 			h = h/2;
 			n = n*2;
 			System.out.println(n);
-		} while(diff > prec);
+		} while(diff > prec && n < nmax);
 		
 		return area;
 	}
 	
 	public double integralSimpson(double a, double b, int n) {
 		
-		return integralSimpson(a, b, n, 0.0001);
+		return integralSimpson(a, b, n, 0.0001, (int)10E6);
 		
 	}
 	
