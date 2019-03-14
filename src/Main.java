@@ -13,7 +13,7 @@ public class Main {
 		double b=input.nextDouble();
 		System.out.println(e.integralRect(a,b,500));
 		System.out.println(e.integralTrap(a,b,500));
-		System.out.println(e.integrateSimpson(a, b, 10));
+		System.out.println(e.integralSimpson(a, b, 10));
 		System.out.print("x0 = ");
 		double x0 = input.nextDouble();
 		System.out.println(e.derivate(x0, 10000));

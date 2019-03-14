@@ -1,5 +1,4 @@
 import net.objecthunter.exp4j.*;
-import java.lang.Math.*;
 
 public class Evaluator {
 	private Expression expression;
@@ -47,7 +46,7 @@ public class Evaluator {
 	}
 	
 	
-	public double integrateSimpson(double a, double b, int n, double prec) {
+	public double integralSimpson(double a, double b, int n, double prec) {
 		
 		if (n%2 != 0) n++; 
 		
@@ -78,14 +77,15 @@ public class Evaluator {
 			diff = Math.abs(area1-area);
 			h = h/2;
 			n = n*2;
+			System.out.println(n);
 		} while(diff > prec);
 		
 		return area;
 	}
 	
-	public double integrateSimpson(double a, double b, int n) {
+	public double integralSimpson(double a, double b, int n) {
 		
-		return integrateSimpson(a, b, n, 0.0001);
+		return integralSimpson(a, b, n, 0.0001);
 		
 	}
 	
