@@ -111,12 +111,28 @@ public class Evaluator {
 	public double bisectionZero(double a, double b, double eps, int nMax){
 		int i=0;
 		double c=0;
-		while (i<nMax && (b-a)>eps){
+		while (i<nMax && Math.abs(b-a)>eps){
 			c=a+(b-a)/2;
 			if (Math.signum(f(a))*Math.signum(f(c))<0) b=c;
 			else a=c;
 		}
 		return c;
 	}
+
+	public double NewtonZero (double a, double eps, int Nmax) {
+
+		int i = 0;
+		double x;
+		double xn = a;
+		do {
+			x = xn;
+			xn = x - f(x)/derivate(x);
+			i++;
+		} while( Math.abs(xn-x) > eps && i < Nmax);
+
+		return xn;
+	}
+
+
 	
 }
